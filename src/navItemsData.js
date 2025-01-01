@@ -5,11 +5,11 @@ import DrawRoundedIcon from "@mui/icons-material/DrawRounded";
 import ContactSupportRoundedIcon from "@mui/icons-material/ContactSupportRounded";
 
 const navItems = [
-    { name: "Home", url: "/", icon: <HomeIcon /> },
-    { name: "About", url: "/about", icon: <InfoIcon /> },
-    { name: "Projects", url: "/projects", icon: <EventNoteIcon /> },
-    { name: "Skills", url: "/skills", icon: <DrawRoundedIcon /> },
-    { name: "Contact", url: "/contact", icon: <ContactSupportRoundedIcon /> },
-  ];
-  
-  export default navItems
+  { name: "Home", url: "#home", icon: <HomeIcon /> },
+  { name: "About", url: "#about", icon: <InfoIcon /> },
+  { name: "Projects", url: "#projects", icon: <EventNoteIcon /> },
+  { name: "Skills", url: "#skills", icon: <DrawRoundedIcon /> },
+  { name: "Contact", url: "#contact", icon: <ContactSupportRoundedIcon /> },
+];
+
+export default navItems;

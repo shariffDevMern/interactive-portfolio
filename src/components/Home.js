@@ -1,92 +1,91 @@
-import {
-  Box,
-  Container,
-  Grid,
-  Typography,
-  Avatar,
-  Button,
-} from "@mui/material";
+import { Box, Typography, Avatar, Button } from "@mui/material";
 import animations from "./animations";
-import { useNavigate } from "react-router-dom";
+import PrecisionManufacturingIcon from "@mui/icons-material/PrecisionManufacturing";
 
 const Home = () => {
-  const navigate = useNavigate();
   return (
-    <Container>
-      <Grid paddingBottom={2} marginTop={"100px"} container>
-        <Grid
-          sx={{
-            width: "100%",
-            display: "flex",
-            gap: { md: 20, xs: 5 },
-            alignItems: "center",
-            flexDirection: { xs: "column", md: "row" },
-            justifyContent: "center",
-          }}
-          item
-        >
-          <Box
+    <Box
+      data-id={"Home"}
+      id={"home"}
+      sx={{
+        display: "flex",
+        minHeight: { xs: "100vh", md: "87vh" },
+        flexDirection: {
+          xs: "column",
+          md: "row",
+        },
+        paddingY: "10%",
+        justifyContent: "center",
+        alignItems: "center",
+        gap: { xs: "5%", md: "20%" },
+      }}
+    >
+      <Box>
+        <Box display={"flex"}>
+          <Typography
             sx={{
-              ...animations.fade,
+              ...animations.slideLeft,
             }}
+            variant="h1"
+            component={"h1"}
           >
-            <Box sx={{ display: "flex", alignItems: "center", gap: 2 }}>
-              <Typography color="#7b2f20" variant="h1" component={"h1"}>
-                Hello{" "}
-              </Typography>
-              <Typography
-                variant="h2"
-                component={"h2"}
-                sx={{
-                  ...animations.wobble,
-                }}
-              >
-                🖐
-              </Typography>
-            </Box>
-
-            <Typography
-              component={"h3"}
-              sx={{
-                ...animations.slideRight,
-              }}
-              variant="h2"
-            >
-              I'm Zunaith Shariff
-            </Typography>
-            <Typography
-              component={"h5"}
-              color="#7b2f20"
-              marginBottom={1}
-              sx={{
-                ...animations.slideLeft,
-              }}
-              variant="h6"
-            >
-              MERN STACK DEVELOPER
-            </Typography>
-            <Button
-              onClick={() => {
-                navigate("/contact", { replace: true });
-              }}
-              variant="outlined"
-              color="#7b2f20"
-            >
-              Contact Me
-            </Button>
-          </Box>
-          <Avatar
+            Hello
+          </Typography>
+          <Typography
             sx={{
-              ...animations.scale,
-              height: 250,
-              width: 250,
+              ...animations.wobble,
             }}
-            alt="profile"
-            src="/profile-pic.jpg"
-          />
-        </Grid>
-      </Grid>
-    </Container>
+            variant="h1"
+            component={"h1"}
+          >
+            🖐️
+          </Typography>
+        </Box>
+        <Typography
+          sx={{
+            background: "linear-gradient(90deg, #ff7eb3, #ff758c, #ff6a63)",
+            WebkitBackgroundClip: "text",
+            WebkitTextFillColor: "transparent",
+          }}
+          variant="h2"
+          component="h2"
+        >
+          I'm Zunaith Shariff
+        </Typography>
+
+        <Typography variant="h4" color="white" component={"h4"}>
+          MERN Stack Devloper
+          <span>
+            {" "}
+            <PrecisionManufacturingIcon />
+          </span>
+        </Typography>
+
+        <Button
+          sx={{
+            marginTop: 2,
+            background: "linear-gradient(90deg, #ff7eb3, #ff758c, #ff6a63)",
+            WebkitBackgroundClip: "text",
+            WebkitTextFillColor: "transparent",
+            borderColor: "#ff7eb3",
+          }}
+          color="#433937
+        "
+          variant="outlined"
+        >
+          Contact Me
+        </Button>
+      </Box>
+      <Avatar
+        sx={{
+          ...animations.scale,
+          height: 250,
+          width: 250,
+        }}
+        alt="profile"
+        src="/profile-pic.jpg"
+      />
+    </Box>
   );
 };
 

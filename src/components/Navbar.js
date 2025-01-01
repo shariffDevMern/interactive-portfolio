@@ -15,50 +15,32 @@ import Toolbar from "@mui/material/Toolbar";
 import Typography from "@mui/material/Typography";
 import NavTabs from "./NavTabs";
 import navItems from "../navItemsData";
-import { useNavigate, useLocation } from "react-router-dom";
+import { Context } from "../Context";
 
 const drawerWidth = 240;
 
 function DrawerAppBar(props) {
   const { window } = props;
   const [mobileOpen, setMobileOpen] = React.useState(false);
-  const location = useLocation();
-  const [activeTab, setActiveTab] = React.useState(() => {
-    const path = location.pathname;
-    if (path === "/") {
-      return "Home";
-    } else if (path === "/about") {
-      return "About";
-    } else if (path === "/projects") {
-      return "Projects";
-    } else if (path === "/skills") {
-      return "Skills";
-    } else if (path === "/contact") {
-      return "Contact";
-    }
-  });
-  const navigate = useNavigate();
+  const [value, setValue] = React.useContext(Context);
   const handleDrawerToggle = () => {
     setMobileOpen((prevState) => !prevState);
   };
   const handleChange = (newValue) => {
-    if (newValue === "Home") {
-      navigate("/", { replace: true });
-    } else if (newValue === "About") {
-      navigate("/about", { replace: true });
-    } else if (newValue === "Projects") {
-      navigate("/projects", { replace: true });
-    } else if (newValue === "Skills") {
-      navigate("/skills", { replace: true });
-    } else if (newValue === "Contact") {
-      navigate("/contact", { replace: true });
-    }
-    setActiveTab(newValue);
+    setValue(newValue);
   };
 
   const drawer = (
     <Box onClick={handleDrawerToggle} sx={{ textAlign: "center" }}>
-      <Typography variant="h6" sx={{ my: 2 }}>
+      <Typography
+        variant="h6"
+        sx={{
+          my: 2,
+          background: "linear-gradient(90deg, #ff7eb3, #ff758c, #ff6a63)",
+          WebkitBackgroundClip: "text",
+          WebkitTextFillColor: "transparent",
+        }}
+      >
         ZUNAITH K S
       </Typography>
       <Divider />
@@ -66,10 +48,11 @@ function DrawerAppBar(props) {
         {navItems.map((item) => (
           <ListItem key={item.name} disablePadding>
             <ListItemButton
+              href={item.url}
               sx={{
                 textAlign: "center",
-                backgroundColor: `${activeTab === item.name && "#2c6798"}`,
-                color: `${activeTab === item.name?"white":"#2c6798"}`,
+                backgroundColor: `${value === item.name && "#3a5378 "}`,
+                color: `${value === item.name ? "white" : "#2c6798"}`,
               }}
             >
               <ListItemText
@@ -94,7 +77,7 @@ function DrawerAppBar(props) {
       <CssBaseline />
       <AppBar
         sx={{
-          backgroundImage: "linear-gradient(to right,white,#a1337b)",
+          backgroundColor: "#161f2d ",
         }}
         component="nav"
       >
@@ -106,16 +89,13 @@ function DrawerAppBar(props) {
             onClick={handleDrawerToggle}
             sx={{ display: { sm: "none" } }}
           >
-            <MenuIcon sx={{ color: "#647459" }} />
+            <MenuIcon sx={{ color: "white" }} />
           </IconButton>
 
           <img
-            onClick={()=>{
-              navigate("/", { replace: true });
-            }}
             alt="logo"
             style={{
-              cursor:'pointer',
+              cursor: "pointer",
               height: "50px",
             }}
             src="/z-logo.png"
@@ -143,6 +123,7 @@ function DrawerAppBar(props) {
             "& .MuiDrawer-paper": {
               boxSizing: "border-box",
               width: drawerWidth,
+              backgroundColor: "#161f2d",
             },
           }}
         >
