@@ -30,13 +30,19 @@ export default function VariantButtonGroup() {
       sx={{
         display: "flex",
         flexDirection: "column",
-
+        justifyContent: "center",
+        alignItems: "center",
         "& > *": {},
       }}
     >
       <ButtonGroup variant="text" aria-label="Basic button group">
         {actions.map((icons) => (
-          <Button href={icons.url} target="_blank" sx={{ color: "white" }}>
+          <Button
+            key={icons.name}
+            href={icons.url}
+            target="_blank"
+            sx={{ color: "white" }}
+          >
             {icons.icon}
           </Button>
         ))}

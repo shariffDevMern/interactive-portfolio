@@ -31,7 +31,6 @@ export default function NavTabs() {
         <Tabs
           value={value}
           onChange={handleChange}
-          textColor=""
           indicatorColor="secondary"
           aria-label="secondary tabs example"
         >

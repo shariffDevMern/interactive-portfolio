@@ -62,6 +62,7 @@ const Home = () => {
         </Typography>
 
         <Button
+        href="#contact"
           sx={{
             marginTop: 2,
             background: "linear-gradient(90deg, #ff7eb3, #ff758c, #ff6a63)",

@@ -2,6 +2,10 @@ import { Box, Typography } from "@mui/material";
 import VariantButtonGroup from "./SocialIcons";
 import { ContributionCalendar } from "react-contribution-calendar";
 import scrollstyles from "./scrollStyles";
+import MediaCard from "./EducationCard";
+import SchoolIcon from "@mui/icons-material/School";
+import CodeIcon from "@mui/icons-material/Code";
+import InfoIcon from "@mui/icons-material/Info";
 
 const data = [
   { "2024-01-01": { level: 3 } },
@@ -149,10 +153,19 @@ const About = () => {
       >
         <Box>
           <Typography
-            sx={{ textAlign: { xs: "center", sm: "left" } }}
+            sx={{
+              textAlign: { xs: "center", sm: "left" },
+              display: "flex",
+              alignItems: "center",
+              justifyContent: { xs: "center", md: "flex-start" },
+              gap: 2,
+            }}
             variant="h3"
             component={"h1"}
           >
+            <span>
+              <InfoIcon sx={{ width: "50px", height: "50px" }} />
+            </span>
             About Me
           </Typography>
           <Box
@@ -216,12 +229,26 @@ const About = () => {
             💃💻
           </Typography>
           <VariantButtonGroup />
-          <Typography sx={{ marginTop: 2 }} variant="h6" color="white">
-            Days I code...
+          <Typography
+            sx={{
+              marginY: 2,
+              display: "flex",
+              alignItems: "center",
+              gap: 1,
+
+              justifyContent: { xs: "center", sm: "flex-start" },
+            }}
+            variant="h6"
+            color="white"
+          >
+            <span>
+              <CodeIcon />
+            </span>
+            Days I code
           </Typography>
           <Box
             sx={{
-              width: { xs: "350px",sm:"500px", md: "100%" },
+              width: { xs: "350px", sm: "500px", md: "100%" },
               overflowY: "auto",
               ...scrollstyles,
               transform: { xs: "scale(0.7)", md: "scale(1)" },
@@ -245,6 +272,23 @@ const About = () => {
               hideDayLabels={false}
             />
           </Box>
+          <Typography
+            sx={{
+              marginY: 2,
+              display: "flex",
+              alignItems: "center",
+              gap: 1,
+              justifyContent: { xs: "center", sm: "flex-start" },
+            }}
+            variant="h6"
+            color="white"
+          >
+            <span>
+              <SchoolIcon />
+            </span>
+            Education
+          </Typography>
+          <MediaCard />
         </Box>
       </Box>
     </>
