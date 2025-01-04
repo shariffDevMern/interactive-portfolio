@@ -62,7 +62,8 @@ const Home = () => {
         </Typography>
 
         <Button
-        href="#contact"
+          href="https://drive.google.com/file/d/1gmEwL4Cgrk9GLW42HAoXCR4t8mF1hxqv/view?usp=sharing"
+          target="_blank"
           sx={{
             marginTop: 2,
             background: "linear-gradient(90deg, #ff7eb3, #ff758c, #ff6a63)",
@@ -74,7 +75,7 @@ const Home = () => {
         "
           variant="outlined"
         >
-          Contact Me
+          Download Resume
         </Button>
       </Box>
       <Avatar
