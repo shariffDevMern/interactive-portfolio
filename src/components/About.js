@@ -236,7 +236,7 @@ const About = () => {
               alignItems: "center",
               gap: 1,
 
-              justifyContent: { xs: "center", sm: "flex-start" },
+              justifyContent: { xs: "center", md: "flex-start" },
             }}
             variant="h6"
             color="white"
@@ -278,7 +278,7 @@ const About = () => {
               display: "flex",
               alignItems: "center",
               gap: 1,
-              justifyContent: { xs: "center", sm: "flex-start" },
+              justifyContent: { xs: "center", md: "flex-start" },
             }}
             variant="h6"
             color="white"

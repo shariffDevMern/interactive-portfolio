@@ -20,10 +20,14 @@ const Home = () => {
         gap: { xs: "5%", md: "20%" },
       }}
     >
-      <Box>
-        <Box display={"flex"}>
+      <Box sx={{ display: "flex", flexDirection: "column" }}>
+        <Box
+          display={"flex"}
+          sx={{ justifyContent: { xs: "center", md: "flex-start" } }}
+        >
           <Typography
             sx={{
+              textAlign: { xs: "center", md: "left" },
               ...animations.slideLeft,
             }}
             variant="h1"
@@ -33,6 +37,7 @@ const Home = () => {
           </Typography>
           <Typography
             sx={{
+              textAlign: { xs: "center", md: "left" },
               ...animations.wobble,
             }}
             variant="h1"
@@ -43,6 +48,7 @@ const Home = () => {
         </Box>
         <Typography
           sx={{
+            textAlign: { xs: "center", md: "left" },
             background: "linear-gradient(90deg, #ff7eb3, #ff758c, #ff6a63)",
             WebkitBackgroundClip: "text",
             WebkitTextFillColor: "transparent",
@@ -53,7 +59,12 @@ const Home = () => {
           I'm Zunaith Shariff
         </Typography>
 
-        <Typography variant="h4" color="white" component={"h4"}>
+        <Typography
+          sx={{ textAlign: { xs: "center", md: "left" } }}
+          variant="h4"
+          color="white"
+          component={"h4"}
+        >
           MERN Stack Devloper
           <span>
             {" "}
@@ -70,6 +81,7 @@ const Home = () => {
             WebkitBackgroundClip: "text",
             WebkitTextFillColor: "transparent",
             borderColor: "#ff7eb3",
+            alignSelf: { md: "flex-start"   },
           }}
           color="#433937
         "
@@ -80,6 +92,7 @@ const Home = () => {
       </Box>
       <Avatar
         sx={{
+          marginTop: { xs: 3, md: 0 },
           ...animations.scale,
           height: 250,
           width: 250,

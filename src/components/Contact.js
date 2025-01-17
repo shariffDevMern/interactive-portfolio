@@ -58,7 +58,7 @@ export default function Contact() {
   return (
     <>
       <Typography
-        sx={{ textAlign: { xs: "center", sm: "left" } }}
+        sx={{ textAlign: { xs: "center", md: "left" } }}
         variant="h3"
         component={"h1"}
       >

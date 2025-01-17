@@ -30,7 +30,7 @@ const Projects = () => {
           marginY: 4,
           display: "flex",
           alignItems: "center",
-          justifyContent: { xs: "center", sm: "flex-start" },
+          justifyContent: { xs: "center", md: "flex-start" },
           gap: 1,
         }}
         color="white"

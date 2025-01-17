@@ -10,8 +10,9 @@ export default function MediaCard() {
     <Box
       sx={{
         display: "flex",
-        flexDirection: { xs: "column", md: "row" },
-        alignItems: { xs: "center", sm: "flex-start" },
+        flexDirection: "row",
+        flexWrap: "wrap",
+        justifyContent: { xs: "center", md: "flex-start" },
         gap: 2,
       }}
     >
@@ -27,7 +28,9 @@ export default function MediaCard() {
           <Typography variant="body2" sx={{ color: "text.secondary" }}>
             'Grade A'
           </Typography>
-          <Typography marginTop={2} variant="subtitle2">Aug 2020 - Jun 2024</Typography>
+          <Typography marginTop={2} variant="subtitle2">
+            Aug 2020 - Jun 2024
+          </Typography>
         </CardContent>
       </Card>
       <Card sx={{ maxWidth: 345 }}>
@@ -46,7 +49,9 @@ export default function MediaCard() {
           <Typography variant="body2" sx={{ color: "text.secondary" }}>
             '90% Course Completed'
           </Typography>
-          <Typography marginTop={2} variant="subtitle2">Feb 2023 - Present</Typography>
+          <Typography marginTop={2} variant="subtitle2">
+            Feb 2023 - Present
+          </Typography>
         </CardContent>
       </Card>
     </Box>
