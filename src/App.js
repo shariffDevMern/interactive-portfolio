@@ -13,6 +13,7 @@ import { Context } from "./Context";
 import QuickAccessBtn from "./components/QuickAccessBtn";
 import Contact from "./components/Contact";
 import Skills from "./components/Skills";
+import Experience from "./components/Experience";
 
 const App = (props) => {
   const [vantaEffect, setVantaEffect] = useState(null);
@@ -88,6 +89,8 @@ const App = (props) => {
           <Home />
           <Divider sx={{ marginY: 5, backgroundColor: "white" }} />
           <About />
+          <Divider sx={{ marginY: 5, backgroundColor: "white" }} />
+          <Experience />
           <Divider sx={{ marginY: 5, backgroundColor: "white" }} />
           <Projects />
           <Divider sx={{ marginY: 5, backgroundColor: "white" }} />
